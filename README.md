@@ -29,10 +29,10 @@ Mysta is an online perfume shopping platform for customers who want to find and 
 - Personalized wishlist for saving and removing fragrances.
 - Shopping cart, delivery details, and order placement.
 - Restock notification requests for unavailable perfumes.
-- Loyalty and rewards program where customers earn points for purchases and redeem them for discounts or gifts.
-- Perfume comparison tool for scent notes, longevity, intensity, occasion, and price.
-- Virtual fragrance consultant chatbot for questions about scent notes, fragrance types, and suitable perfumes.
-- Conversion analytics dashboard tracking product views, add-to-cart rates, checkout abandonment, and completed purchases.
+- **Loyalty and rewards program:** Customers earn points when they make purchases and can redeem those points for discounts or exclusive gifts. This encourages repeat purchases and gives customers an added benefit for continuing to shop with Mysta.
+- **Perfume comparison tool:** Customers select perfumes to compare their scent notes, longevity, intensity, suitable occasions, and prices side by side. This helps shoppers understand the differences between unfamiliar fragrances and choose one that fits their preferences and budget.
+- **Virtual fragrance consultant:** A chatbot answers customers' questions about scent notes and fragrance types, then suggests suitable Mysta perfumes based on what they are looking for. This gives shoppers immediate guidance when they need help choosing a fragrance.
+- **Conversion analytics dashboard:** The dashboard tracks product views, add-to-cart rates, checkout abandonment, and completed purchases. Mysta can use these measures to see where shoppers leave the buying process and identify parts of the shopping experience that may need improvement.
 
 ### 3.2 The use cases we will build
 
