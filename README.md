@@ -14,6 +14,7 @@
 | Abdullah Abouleil | 16006613 | T5 | abdulaahleil |
 | Ali Khaled | 16002876 | T4 | ali-oagiz |
 | Saif Adam | 16002689 | T5 | saifayman1966-eng |
+| Omar Mohamed | 16006657 | T4 | Shar2awyyy1 |
 
 ## 2. The idea
 
@@ -33,6 +34,7 @@ Mysta is an online perfume shopping platform for customers who want to find and 
 - **Perfume comparison tool:** Customers select perfumes to compare their scent notes, longevity, intensity, suitable occasions, and prices side by side. This helps shoppers understand the differences between unfamiliar fragrances and choose one that fits their preferences and budget.
 - **Virtual fragrance consultant:** A chatbot answers customers' questions about scent notes and fragrance types, then suggests suitable Mysta perfumes based on what they are looking for. This gives shoppers immediate guidance when they need help choosing a fragrance.
 - **Conversion analytics dashboard:** The dashboard tracks product views, add-to-cart rates, checkout abandonment, and completed purchases. Mysta can use these measures to see where shoppers leave the buying process and identify parts of the shopping experience that may need improvement.
+- **Order cancellation requests:** Customers request cancellation for an order that has not yet been processed and provide a reason. An admin reviews the request, and the customer can see whether it is pending, approved, or rejected. If approved, the related order is marked as cancelled.
 
 ### 3.2 The use cases we will build
 
@@ -44,6 +46,7 @@ Mysta is an online perfume shopping platform for customers who want to find and 
 | 4 | Personalized wishlist | Saves a perfume to their wishlist or removes a saved perfume | Their current list of saved perfumes | A Wishlist linked to the user and containing saved product references |
 | 5 | Shopping cart and order placement | Adds perfumes to the cart, adjusts quantities, enters delivery details, and places an order | Cart contents, a clear total price, and order confirmation | Cart items and an Order with products, quantities, delivery details, and total |
 | 6 | Restock notification requests | Requests a notification for an unavailable perfume | Confirmation that the request is pending; its status when handled | A RestockRequest linked to the user and product, with request status |
+| 7 | Order cancellation requests | Requests cancellation of an order that has not yet been processed and provides a reason | The request status: pending, approved, or rejected; confirmation if the order is cancelled | An OrderCancellationRequest linked to the user and order; the Order status is updated if approved |
 
 ## 4. Who owns what
 
@@ -55,6 +58,7 @@ Mysta is an online perfume shopping platform for customers who want to find and 
 | Abdullah Abouleil | 3. Customer reviews and ratings |
 | Saif Adam | 6. Restock notification requests |
 | Ali Khaled | 4. Personalized wishlist |
+| Omar Mohamed | 7. Order cancellation requests |
 
 ## 5. Data model
 
@@ -163,6 +167,20 @@ const restockRequestSchema = new mongoose.Schema({
   handledAt: { type: Date },
 });
 restockRequestSchema.index({ user: 1, product: 1, status: 1 });
+```
+
+### OrderCancellationRequest
+
+```js
+const orderCancellationRequestSchema = new mongoose.Schema({
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  order: { type: mongoose.Schema.Types.ObjectId, ref: 'Order', required: true },
+  reason: { type: String, required: true, trim: true },
+  status: { type: String, enum: ['pending', 'approved', 'rejected'], default: 'pending' },
+  createdAt: { type: Date, default: Date.now },
+  reviewedAt: { type: Date },
+});
+orderCancellationRequestSchema.index({ user: 1, order: 1 }, { unique: true });
 ```
 
 ## 6. Run it locally
