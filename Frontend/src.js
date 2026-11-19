@@ -1,0 +1,1 @@
+console.log("Mysta frontend is running!");
