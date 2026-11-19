@@ -1,0 +1,129 @@
+
+/* Mysta Navigation Bar */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf7f2;
+  color: #30231f;
+  font-family: Arial, sans-serif;
+}
+
+.mysta-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 6%;
+  background: #211915;
+  color: #f7eee5;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.mysta-logo {
+  color: #e6c6a5;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-decoration: none;
+}
+
+.mysta-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.mysta-nav-links a,
+.mysta-cart {
+  color: #f7eee5;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mysta-nav-links a:hover,
+.mysta-cart:hover {
+  color: #e6c6a5;
+}
+
+.mysta-cart {
+  border: 1px solid #b99a7a;
+  padding: 10px 16px;
+  border-radius: 3px;
+}
+
+.mysta-menu-toggle {
+  display: none;
+  color: #f7eee5;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+header,
+main section {
+  padding: 65px 8%;
+}
+
+header {
+  background: #eee1d2;
+  text-align: center;
+}
+
+main section {
+  min-height: 220px;
+  border-bottom: 1px solid #e5d9ce;
+}
+
+h1,
+h2 {
+  font-family: Georgia, serif;
+}
+
+@media (max-width: 700px) {
+  .mysta-navbar {
+    padding: 16px 5%;
+    gap: 12px;
+  }
+
+  .mysta-logo {
+    font-size: 22px;
+  }
+
+  .mysta-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .mysta-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: #211915;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mysta-nav-links.is-open {
+    display: flex;
+  }
+
+  .mysta-cart {
+    padding: 8px 10px;
+  }
+}
