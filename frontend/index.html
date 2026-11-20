@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mysta - Smart Perfume Shopping</title>
+  <link rel="icon" href="./logo.png">
+  <link rel="stylesheet" href="./navbar.css">
+  <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="hero-text">
+      <img class="hero-logo" src="./logo.png" alt="Mysta logo">
+      <h1 id="project-name">Mysta - Smart Perfume Shopping Platform</h1>
+      <p class="hero-tagline">Which one are you? Discover the Mysta fragrance that matches your personality.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#finder">Find your scent</a>
+        <a class="btn btn-outline" href="#products">Shop perfumes</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./bottles.jpg" alt="Mysta Aroma, Sugar Kiss and Aesthetic Chaos perfume bottles">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="section-head">
+        <p class="eyebrow">Our Perfumes</p>
+        <h2>Discover your next signature scent</h2>
+      </div>
+
+      <div id="root"></div>
+    </section>
+
+    <!-- Shop by scent family -->
+    <section id="finder">
+      <div class="section-head">
+        <p class="eyebrow">Shop by Scent</p>
+        <h2>What do you love to smell like?</h2>
+      </div>
+
+      <div class="scent-grid">
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-sweet"></span>Sweet</a>
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-fresh"></span>Fresh</a>
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-woody"></span>Woody</a>
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-floral"></span>Floral</a>
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-citrus"></span>Citrus</a>
+        <a class="scent-tile" href="#products"><span class="scent-dot dot-spicy"></span>Spicy</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <p class="eyebrow">About Mysta</p>
+      <h2>May your scent tell a story.</h2>
+      <p>
+        Mysta helps you find and buy fragrances with confidence, through a
+        personalized scent finder, honest customer reviews, and a simple checkout.
+      </p>
+    </section>
+
+    <!-- Shopping bag placeholder (navbar links here) -->
+    <section id="cart">
+      <div class="section-head">
+        <p class="eyebrow">Shopping Bag</p>
+        <h2>Your bag is empty</h2>
+      </div>
+      <p class="center-text">Perfumes you add will appear here.</p>
+    </section>
+
+  </main>
+
+  <!-- Contact / footer -->
+  <footer id="contact" class="site-footer">
+    <div>
+      <span class="footer-logo">MYSTA</span>
+      <p>Smart perfume shopping.</p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>Instagram: @mysta.eg</p>
+    </div>
+    <p class="copyright">© 2026 Mysta · EBD Project</p>
+  </footer>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
