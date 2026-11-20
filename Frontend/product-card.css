@@ -1,0 +1,41 @@
+/* Supplemental styles for product cards; base card styling lives in home.css. */
+.product-image-placeholder {
+  display: grid;
+  place-items: center;
+  color: #a88169;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
+}
+
+.product-card__name {
+  overflow-wrap: anywhere;
+}
+
+.product-card__notes {
+  margin: 0 0 1rem;
+  color: var(--muted, #7b6a86);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.product-card__stock-status {
+  color: #8a4b38;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.product-card__action {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.product-card__action:focus-visible {
+  outline: 3px solid var(--pink, #d9559a);
+  outline-offset: 3px;
+}
+
+.product-card__action:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
