@@ -1,4 +1,3 @@
-
 {
   "name": "mysta-backend",
   "version": "1.0.0",
@@ -8,8 +7,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^9.12.2"
   }
 }
